@@ -76,15 +76,23 @@ void khoitao(Snack &snack,food &hq){
 void hienthi(Snack snack ,food hq){
 
     clrscr();
-    //in ra khung
-     for (int i=0;i<height;i++){
-        for (int j =0;j<width;j++){
+    for (int i=0;i<width;i++){
+        gotoXY(i,0);
+        cout<<char (3);}
+        for (int i=0;i<width;i++){
+        gotoXY(i,height);
+        cout<<char (4);
+    }
+    for (int j=0;j<height;j++){
+        gotoXY(0,j);
+        cout<<char (5);}
+        for (int j =0;j<height;j++){
+        gotoXY(width,j);
+        cout<<char (6);
 
-            if (i==0||i==height-1 ||j==0||j==width-1)
-                cout<<char (3);
-                else cout<<" ";
-        }cout<<endl;
-     }
+    }
+
+
     //in ra dau ran
     gotoXY(snack.dot[0].x,snack.dot[0].y);
     cout<<char (2);
@@ -99,7 +107,7 @@ void hienthi(Snack snack ,food hq){
 }
 void chuyendong(Snack &snack){
     //cap nhat vi tri con ran
-    for (int i =snack.n-1;i>0;i++)
+    for (int i =snack.n-1;i>0;i--)
         snack.dot[i]=snack.dot[i-1];
     if(kbhit())//neu nguoi dung dang nhap vao 1 phim no do
     {
