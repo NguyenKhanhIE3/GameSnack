@@ -186,5 +186,8 @@ bool Rules ()
     if ( button == 'n' || button == 'N')
         return false ;
     if ( button == 'y' || button == 'Y')
+    {
+	clrscr();
         return true ;
+    }
 }
