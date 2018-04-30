@@ -112,7 +112,7 @@ int Process (Snake & snake ,food &hq )
 {
 
     //xu li ran cham bien
-    if ( snake.dot[0].x >= (width/2 -1) ||snake.dot[0].x <= 0 ||snake.dot[0].y <= 0 ||snake.dot[0].y >=(height -1) )
+    if ( snake.dot[0].x >= (width/2 ) ||snake.dot[0].x <= 0 ||snake.dot[0].y <= 0 ||snake.dot[0].y >=(height -1) )
         return -1;
     //xu li ran can chinh no
     for (int i = 1; i < snake.n;i++)
@@ -164,7 +164,7 @@ void Main_Move (Snake &snake ,food &hq)
 
         }
 
-            Sleep(100);
+            Sleep(50);
     }
     while (1);
 
