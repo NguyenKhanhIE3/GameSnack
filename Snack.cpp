@@ -84,10 +84,11 @@ struct food
 
 void Creat (Snake &snake ,food &hq)
 {
-	//khoi tao gia tri ban dau ;
+	
+    //khoi tao gia tri ban dau ;
 
-	snake.tickSpeed = 70;
-	snake.score = 0;
+    snake.tickSpeed = 70;
+    snake.score = 0;
     //khoi tao ran
     snake.n = 3;
     snake.dot[0].x = 8;
@@ -258,7 +259,7 @@ bool Rules ()
 
 int main  ()
 {
-	srand(time(NULL));
+    srand(time(NULL));
     Snake snake ;
     food hq;
     char button;
