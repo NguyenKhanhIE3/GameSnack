@@ -16,10 +16,10 @@ void VeMoto(int dong ,int cot ,int kitu ,int mau =7)
 
 void Creat (Snake &snake ,food &hq)
 {
-	//khoi tao gia tri ban dau ;
+    //khoi tao gia tri ban dau ;
 
-	snake.tickSpeed = 70;
-	snake.score = 0;
+    snake.tickSpeed = 70;
+    snake.score = 0;
     //khoi tao ran
     snake.n = 3;
     snake.dot[0].x = 8;
@@ -38,8 +38,8 @@ void Creat (Snake &snake ,food &hq)
     	for (int j = 0;j < width/2;j++)
     	{
     		VeMoto(i,j,' ');
-		}
 	}
+    }
 
 
 }
@@ -47,15 +47,15 @@ void Creat (Snake &snake ,food &hq)
 void Display(Snake snake ,food hq)
 {
     for(int i = 0;i < height ;i++)
-	{
-		VeMoto(i,0,4);
-		VeMoto(i,width/2,4);
-	}
-	for (int j = 0;j < width/2;j++)
     {
-		VeMoto(0,j,4);
-		VeMoto(height-1,j,4);
-	}
+	 VeMoto(i,0,176);
+	 VeMoto(i,width/2,176);
+    }
+    for (int j = 0;j < width/2;j++)
+    {
+	 VeMoto(0,j,176);
+         VeMoto(height-1,j,176);
+    }
 
     //in ra dau ran
 
@@ -63,13 +63,15 @@ void Display(Snake snake ,food hq)
     //in ra than ra than ran
     for (int i = 1;i < snake.n;i++)
     {
-    	VeMoto(snake.dot[i].y,snake.dot[i].x,178,14);
+    	 VeMoto(snake.dot[i].y,snake.dot[i].x,178,14);
     }
     //in ra hoa qua
     VeMoto(hq.y,hq.x,4,15);
     //diem so
     gotoXY((width/2)+15,23 );
+
     TextColor(12);
+
     cout<<"Score :"<<snake.score;
     //in buffer ra man hinh
     gotoXY(0,0);
@@ -80,17 +82,17 @@ void Display(Snake snake ,food hq)
     		TextColor(buffer[i][j].mau);
     		cout<<buffer[i][j].kitu;
     		buffer[i][j].kitu = ' ';
-		}
-		if (i < height -1)
-			cout<<"\n";
 	}
+	if (i < height -1)
+		cout<<"\n";
+    }
 }
 void Move_1 (Snake &snake )
 {
     //cap nhat vi tri con ran
     for (int i = snake.n-1;i > 0;i--)
         snake.dot[i] = snake.dot[i-1];
-   // di chuyen ran 
+    //di chuyen ran
     if ( GetAsyncKeyState(VK_UP))
         snake.tt = up;
     if ( GetAsyncKeyState(VK_DOWN))
@@ -112,7 +114,7 @@ int Process (Snake & snake ,food &hq )
 {
 
     //xu li ran cham bien
-    if ( snake.dot[0].x >= (width/2 ) ||snake.dot[0].x <= 0 ||snake.dot[0].y <= 0 ||snake.dot[0].y >=(height -1) )
+    if ( snake.dot[0].x >= (width/2 )||snake.dot[0].x <= 0 ||snake.dot[0].y <= 0 ||snake.dot[0].y >=(height -1) )
         return -1;
     //xu li ran can chinh no
     for (int i = 1; i < snake.n;i++)
@@ -126,7 +128,7 @@ int Process (Snake & snake ,food &hq )
             snake.dot[i] = snake.dot[i-1];
         snake.n++;
         snake.score++;
-	//khoi tao lai vi tri hoa qua 
+        // khoi tao lai vi tri hoa qua
         hq.x = 2 + rand () %( (width/2)-6);
         hq.y = 2 + rand () %( height-6);
         if ( snake.tickSpeed >= 7 )
@@ -169,6 +171,4 @@ void Main_Move (Snake &snake ,food &hq)
     while (1);
 
 }
-
-    
 
