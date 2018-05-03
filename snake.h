@@ -40,7 +40,6 @@ void Display (Snake snake ,food hq);
 void Move_1 (Snake & snake );
 int Process (Snake & snake ,food &hq);
 void Main_Move (Snake & snake ,food &hq );
-bool Rules();
 
 
 #endif // SNAKE_H_INCLUDED
