@@ -90,7 +90,7 @@ void Move_1 (Snake &snake )
     //cap nhat vi tri con ran
     for (int i = snake.n-1;i > 0;i--)
         snake.dot[i] = snake.dot[i-1];
-
+   // di chuyen ran 
     if ( GetAsyncKeyState(VK_UP))
         snake.tt = up;
     if ( GetAsyncKeyState(VK_DOWN))
@@ -126,7 +126,7 @@ int Process (Snake & snake ,food &hq )
             snake.dot[i] = snake.dot[i-1];
         snake.n++;
         snake.score++;
-
+	//khoi tao lai vi tri hoa qua 
         hq.x = 2 + rand () %( (width/2)-6);
         hq.y = 2 + rand () %( height-6);
         if ( snake.tickSpeed >= 7 )
@@ -169,25 +169,6 @@ void Main_Move (Snake &snake ,food &hq)
     while (1);
 
 }
-bool Rules ()
-{
-    char button;
-    gotoXY(12,8);
-    cout<<"_________________________QUY TAC____________________________________";
-    gotoXY(12,10);
-    cout<<"Nguoi choi su dung cac phim mui ten tren ban phim de di chuyen ran \n";
-    gotoXY(12,12);
-    cout<<"Tro choi ket thuc khi ran tu can chinh no hoac dam vao tuong       \n";
-    gotoXY(12,14);
-    cout<<"Ban co muon quay tro lai menu ?\n"
-          "\t\t\t y/Y:co\n"
-          "\t\t\t n/N:khong";
-    button =_getch();
-    if ( button == 'n' || button == 'N')
-        return false ;
-    if ( button == 'y' || button == 'Y')
-    {
-	clrscr();
-        return true ;
-    }
-}
+
+    
+
