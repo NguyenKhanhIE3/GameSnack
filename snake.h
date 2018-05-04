@@ -34,7 +34,7 @@ struct food
 
     int x,y;//x la hoanh do ,y la tung do ;
 
-};   			//thahhaha
+};   			
 void Creat (Snake &snake ,food &hq);
 void Display (Snake snake ,food hq);
 void Move_1 (Snake & snake );
