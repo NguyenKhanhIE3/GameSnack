@@ -81,7 +81,7 @@ void Display(Snake snake ,food hq)
     	{
     		TextColor(buffer[i][j].mau);
     		cout<<buffer[i][j].kitu;
-    		buffer[i][j].kitu = ' ';
+    		 buffer[i][j].kitu = ' ';
 	}
 	if (i < height -1)
 		cout<<"\n";
@@ -94,13 +94,17 @@ void Move_1 (Snake &snake )
         snake.dot[i] = snake.dot[i-1];
     //di chuyen ran
     if ( GetAsyncKeyState(VK_UP))
-        snake.tt = up;
+	if (snake.tt != down )
+                snake.tt = up;
     if ( GetAsyncKeyState(VK_DOWN))
-        snake.tt = down;
+	if (snake.tt != up)
+        	snake.tt = down;
     if ( GetAsyncKeyState(VK_LEFT))
-        snake.tt = lefts;
+	if (snake.tt != rights)
+        	snake.tt = lefts;
     if ( GetAsyncKeyState(VK_RIGHT))
-        snake.tt = rights ;
+	if (snake.tt != lefts)
+        	snake.tt = rights ;
     if ( snake.tt == up )
         snake.dot[0].y--;
     if ( snake.tt == down )
