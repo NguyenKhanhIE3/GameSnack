@@ -165,7 +165,8 @@ void Main_Move (Snake &snake ,food &hq)
             cout<<"\t\t  *See you again !\n\n\n\n";
             gotoXY((width/2)+5,20);
             cout<<"\t\t *****************";
-            while (_getch()!=13);
+            _getch();
+	    clrscr();
             break;
 
         }
