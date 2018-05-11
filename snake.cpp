@@ -166,7 +166,7 @@ void Main_Move (Snake &snake ,food &hq)
             gotoXY((width/2)+5,20);
             cout<<"\t\t *****************";
             _getch();
-	    clrscr();
+	    
             break;
 
         }
