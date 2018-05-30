@@ -8,6 +8,6 @@
        -> Xây dựng các cấp độ khác nhau cho trò chơi từ dễ đến khó .
        -> Xây dựng  nhiều vật cản khác nhau .
        -> Thêm những loại thức ăn mà rắn ăn vào sẽ  giảm chiều dài .
-       -> Phát triển giao diện .
+       -> Phát triển giao diện.
        
         
