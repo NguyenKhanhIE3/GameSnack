@@ -7,6 +7,7 @@
        * Mỗi khi ăn thức ăn thì tốc độ của rắn sẽ nhanh lên.
        
        * Rắn chết khi tự cắn mình hoặc đâm vào tường .
+       
 * Hướng phát triển trong tương lai : 
       
        * Xây dựng các cấp độ khác nhau cho trò chơi từ dễ đến khó .
